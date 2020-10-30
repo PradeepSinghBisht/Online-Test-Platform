@@ -22,8 +22,8 @@ if (isset($_GET['id'])) {
     $sql = "DELETE FROM questions WHERE `test_id`= '".$id."'";
     $result = $conn->query($sql);
 
-    $start = (($id-1) * 8)+1;
-    $end = ($id * 8);
+    $start = (($id-1) * 40)+1;
+    $end = ($id * 40);
 
     $sql = "DELETE FROM answers WHERE `a_id` BETWEEN '".$start."' AND '".$end."'";
     $result = $conn->query($sql);
